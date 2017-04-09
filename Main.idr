@@ -84,7 +84,11 @@ correctOutput = [10,6]
 
 
 main : IO ()
-main = putStrLn $ show $ (squaredError testOutput correctOutput, zipWith singleSquaredError testOutput correctOutput)
+main = do putStrLn $ "input : " ++ (show testInput)
+          putStrLn $ "output : " ++ (show testOutput)
+          putStrLn $ "target output : " ++ (show correctOutput)
+          putStrLn $ "total squared error : " ++ (show $ squaredError testOutput correctOutput)
+          putStrLn $ "detailed squared error : " ++ (show $ zipWith singleSquaredError testOutput correctOutput)
 
 
 
