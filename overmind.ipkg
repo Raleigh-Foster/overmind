@@ -1,0 +1,9 @@
+package overmind
+
+
+modules =
+ Main 
+
+executable = overmind
+
+main = Main
